@@ -21,7 +21,7 @@
     </div>
   
     <div id="main-screen">
-      <span id="main-info">Усе Нататкі</span>
+      <span id="main-info">DrukMaš</span>
       <span id="notes-count"></span>
       <table>
         <tbody>     
@@ -32,7 +32,7 @@
   
     <div id="edit-screen">
       <i id="back-icon" class="material-icons" onclick="backIconClick()">arrow_back_ios</i>
-      <input type="text" placeholder="Название" onchange="saveNote()">
+      <input type="text" placeholder="Назва" onchange="saveNote()">
       <hr/>
       <textarea onchange="saveNote()"></textarea>
     </div>
@@ -255,7 +255,7 @@
         noteList = window.localStorage.getItem('noteList')
           ? JSON.parse(window.localStorage.getItem('noteList'))
           : [];
-        notesCount.innerText = `Заметок ${noteList.length}`;
+        notesCount.innerText = `Нататак: ${noteList.length}`;
         if(noteList) {
           noteList.map(elem => {
             createNewTableRow(elem.id, elem.title, elem.date);
